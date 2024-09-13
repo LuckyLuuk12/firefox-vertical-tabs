@@ -1,0 +1,65 @@
+/* Firefox Version 130.0 Custom CSS for vertical tabs */
+#browser {
+  --custom-tab-width: 215px; /* custom-bar-width  minus  2*custom-bar-padding */
+  --custom-bar-width: 225px;
+  --custom-bar-padding: 5px;
+  position: relative;
+}
+#sidebar-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 9999;
+}
+#vertical-tabs:hover .scrollbox-clip {
+  margin-right: -5px !important;
+}
+#appcontent {
+  margin-left: 50px;
+  width: fit-content;
+  height: 100%;
+  z-index: 9998;
+}
+.wrapper {
+  padding: 0 var(--custom-bar-padding) !important;
+}
+#vertical-tabs:hover #tabbrowser-arrowscrollbox {
+  width: var(--custom-tab-width) !important;
+}
+#vertical-tabs:hover #tabbrowser-tabs {
+  width: var(--custom-tab-width) !important;
+}
+#vertical-tabs > *, #tabbrowser-tabs, .tab-label-container {
+  cursor: pointer;
+}
+#vertical-tabs:hover, #vertical-tabs:hover .wrapper {
+  width: var(--custom-bar-width);
+}
+#vertical-tabs:hover .tab-label-container, #vertical-tabs:hover .toolbarbutton-text {
+  display: unset !important;
+  width: 100% !important;
+  padding: 0.45rem;
+}
+#newtab-button-container {
+  order: 1;
+  margin: 0 !important;
+}
+#vertical-tabs-newtab-button {
+  padding: 0 var(--inline-tab-padding) !important;
+}
+#vertical-tabs:hover #newtab-button-container {
+  width: var(--custom-tab-width) !important;
+}
+#vertical-tabs:hover .tabbrowser-tab {
+  width: var(--custom-tab-width) !important;
+}
+/* Ensure the close button is always visible when hovering over a tab */
+#vertical-tabs:hover .tab-close-button {
+  display: inline !important;
+}
+
+/* Hide the close button by default */
+.tab-close-button {
+  display: none;
+}
