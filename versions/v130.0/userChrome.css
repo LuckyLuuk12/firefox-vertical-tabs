@@ -22,7 +22,6 @@
   margin-left: 50px;
   width: fit-content;
   height: 100%;
-  z-index: 9998;
 }
 .wrapper {
   padding: var(--custom-bar-padding) !important;
