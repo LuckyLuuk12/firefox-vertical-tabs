@@ -1,10 +1,15 @@
 /* Firefox Version 130.0 Custom CSS for vertical tabs */
+* {
+  scrollbar-width: none !important;
+}
+/* Container width tabs and browser-content (i.e. the site/page) */
 #browser {
   --custom-tab-width: 215px; /* custom-bar-width  minus  2*custom-bar-padding */
   --custom-bar-width: 225px;
   --custom-bar-padding: 5px;
   position: relative;
 }
+/* The sidebar containing the tabs */
 #sidebar-main {
   position: absolute;
   top: 0;
@@ -12,9 +17,7 @@
   height: 100%;
   z-index: 9999;
 }
-#vertical-tabs:hover .scrollbox-clip {
-  margin-right: -5px !important;
-}
+/* The browser-content */
 #appcontent {
   margin-left: 50px;
   width: fit-content;
@@ -22,19 +25,13 @@
   z-index: 9998;
 }
 .wrapper {
-  padding: 0 var(--custom-bar-padding) !important;
+  padding: var(--custom-bar-padding) !important;
 }
-#vertical-tabs:hover #tabbrowser-arrowscrollbox {
+#vertical-tabs:hover #tabbrowser-arrowscrollbox, #vertical-tabs:hover #tabbrowser-tabs, #vertical-tabs:hover #newtab-button-container, #vertical-tabs:hover .tabbrowser-tab {
   width: var(--custom-tab-width) !important;
 }
-#vertical-tabs:hover #tabbrowser-tabs {
-  width: var(--custom-tab-width) !important;
-}
-#vertical-tabs > *, #tabbrowser-tabs, .tab-label-container {
+#vertical-tabs > *, #tabbrowser-tabs, .tab-label-container, button {
   cursor: pointer;
-}
-#vertical-tabs:hover, #vertical-tabs:hover .wrapper {
-  width: var(--custom-bar-width);
 }
 #vertical-tabs:hover .tab-label-container, #vertical-tabs:hover .toolbarbutton-text {
   display: unset !important;
@@ -43,23 +40,16 @@
 }
 #newtab-button-container {
   order: 1;
-  margin: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 var(--custom-bar-padding) 0 !important;
 }
 #vertical-tabs-newtab-button {
-  padding: 0 var(--inline-tab-padding) !important;
-}
-#vertical-tabs:hover #newtab-button-container {
-  width: var(--custom-tab-width) !important;
-}
-#vertical-tabs:hover .tabbrowser-tab {
-  width: var(--custom-tab-width) !important;
+  padding: var(--inline-tab-padding) !important;
 }
 /* Ensure the close button is always visible when hovering over a tab */
 #vertical-tabs:hover .tab-close-button {
   display: inline !important;
 }
 
-/* Hide the close button by default */
-.tab-close-button {
-  display: none;
-}
+
+
