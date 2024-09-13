@@ -23,6 +23,9 @@
   width: fit-content;
   height: 100%;
 }
+[inFullscreen] #appcontent {
+  margin-left: 0px;
+}
 .wrapper {
   padding: var(--custom-bar-padding) !important;
 }
