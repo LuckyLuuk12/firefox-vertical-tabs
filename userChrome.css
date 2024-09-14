@@ -31,7 +31,7 @@
   height: 100%;
 }
 [inFullscreen] #appcontent {
-  margin-left: 0px;
+  margin-left: 0;
 }
 .wrapper {
   padding: var(--custom-bar-padding) !important;
@@ -74,7 +74,7 @@
   }
 
   #toolbar-menubar {
-    padding-top: 0px !important;
+    padding-top: 0 !important;
   }
 
   #TabsToolbar {
@@ -82,7 +82,7 @@
   }
 
   #nav-bar {
-    padding: 0px 0px 0px 86px !important;
+    padding: 0 0 0 86px !important;
   }
 
   #nav-bar-customization-target {
@@ -92,8 +92,8 @@
   #TabsToolbar .titlebar-buttonbox-container {
     visibility: visible !important;
     position: absolute;
-    top: 0px; /* 12px */
-    left: 0px;
+    top: 0; /* 12px */
+    left: 0;
   }
 
   [inFullscreen] #TabsToolbar .titlebar-buttonbox-container {
@@ -105,7 +105,7 @@
   }
 
   .titlebar-button > .toolbarbutton-icon {
-    height: 13x !important;
+    height: 13px !important;
     min-height: 13px !important;
     width: 13px !important;
     min-width: 13px !important;
@@ -129,11 +129,11 @@
 /* Linux specific styles */
 @media (-moz-platform: linux) {
   #nav-bar {
-    padding: 0px 0px 0px 0px !important;
+    padding: 0 0 0 0 !important;
   }
 
   #nav-bar-customization-target {
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   #TabsToolbar .titlebar-buttonbox-container {
@@ -154,7 +154,7 @@
 
   /* Right side padding */
   #nav-bar {
-    padding: 0px 115px 0px 0px !important;
+    padding: 0 115px 0 0 !important;
   }
 
   /* Hide unix close/min/max buttons */
@@ -166,19 +166,19 @@
   #toolbar-menubar .titlebar-buttonbox-container {
     visibility: visible !important;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     z-index: 999 !important;
   }
 
   /* padding fix */
   #nav-bar-customization-target {
-    padding-left: 0px !important;
+    padding-left: 0 !important;
   }
 
   /* trying to clean buttons to match others */
   .titlebar-button {
-    margin: 0px !important;
+    margin: 0 !important;
     padding: 13px !important;
   }
 }
