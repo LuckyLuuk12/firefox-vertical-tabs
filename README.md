@@ -28,4 +28,5 @@ devtools to inspect the browser and modify it:
 </p>
 <h6><i>Note that changes you make in the <code>userChrome.css</code> require a restart of the browser.</i></h6>
 So after you modified the file you can make a pull request and I will review it.
+<p>Want to contribute? Be sure to read <a href="https://github.com/LuckyLuuk12/firefox-vertical-tabs/blob/master/CONTRIBUTING.md">this</a></p>
 
