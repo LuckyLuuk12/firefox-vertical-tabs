@@ -17,11 +17,21 @@
   height: 100%;
   z-index: 9999;
 }
+/* The sidebar containing the settings and extensions */
+#sidebar-box {
+  margin-left: 50px;
+  height: 100%;
+  max-width: calc(75px * 6) !important;
+  width: calc(75px * 6) !important;
+}
 /* The browser-content */
 #appcontent {
   margin-left: 50px;
   width: fit-content;
   height: 100%;
+}
+[inFullscreen] #appcontent {
+  margin-left: 0px;
 }
 .wrapper {
   padding: var(--custom-bar-padding) !important;
