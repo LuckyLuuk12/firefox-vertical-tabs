@@ -1,4 +1,4 @@
-/* Firefox Version 132.0.1 Custom CSS for vertical tabs */
+/* Firefox Version 130.0 Custom CSS for vertical tabs */
 * {
   scrollbar-width: none !important;
   --custom-tab-width: 185px; /* custom-bar-width  minus  2*custom-bar-padding */
@@ -14,7 +14,7 @@
   position: relative;
 }
 #navigator-toolbox {
-  border-bottom: 0.5px solid rgba(0,0,0, 0.2) !important;
+  border-bottom: 0.5px solid rgba(80,80,80, 0.2) !important;
 }
 /* The sidebar containing the tabs */
 #sidebar-main {
@@ -47,8 +47,11 @@
 /* correct widths for hover background and tabs itself */
 .tab-content, .tab-background {
   margin: 2px var(--custom-bar-padding) !important;
-  padding: 0 var(--custom-bar-padding) !important;
+  padding-inline: 0 var(--custom-bar-padding) !important;
   cursor: pointer;
+}
+.tab-icon-image, .tab-label-container {
+  padding-left: var(--custom-bar-padding) !important;
 }
 /* display close button and site title on hover of sidebar */
 #vertical-tabs:hover .tab-label-container, #vertical-tabs:hover .tab-close-button, #vertical-tabs:hover .toolbarbutton-text {
