@@ -1,5 +1,5 @@
 <h1>Firefox Vertical Tabs</h1>
-<h3>working for Version 130.0 (64-bit)</h3>
+<h3>working for Versions 130.0, 132 &amp; 133 (64-bit)</h3>
 <p>
 As of now, september 2024, Firefox's vertical tabs are still in an 
 experimental version and they are absolute trash. By following below steps 
