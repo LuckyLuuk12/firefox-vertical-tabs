@@ -8,6 +8,8 @@ It might be though that Firefox updates it and breaks everything again.
 Please notify me or fork and pull request on this yourself (:
 </p>
 <h2>Installation:</h2>
+Note that if the latest userChrome.css works in the latest version of Firefox, that we do not have a folder for that version
+as we only update the userChrome.css file when it breaks. So if you are using a newer version of Firefox just try the latest.
 <ol>
   <li>Go to <code>about:config</code> in your Firefox browser.</li>
   <li>Accept the risk and continue.</li>
