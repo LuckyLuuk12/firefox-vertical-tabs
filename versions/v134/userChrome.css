@@ -18,7 +18,7 @@
 }
 /* The sidebar containing the tabs */
 #sidebar-main {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: var(--left-side);
   right: var(--right-side);
@@ -27,6 +27,7 @@
 }
 /* The browser-content */
 #tabbrowser-tabbox {
+  margin-left: var(--left-margin) !important;
   margin-right: var(--right-margin) !important;
   width: fit-content;
   height: 100%;
