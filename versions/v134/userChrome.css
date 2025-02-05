@@ -1,4 +1,4 @@
-/* Firefox Version 130.0 Custom CSS for vertical tabs */
+/* Firefox Version 134+ Custom CSS for vertical tabs */
 * {
   scrollbar-width: none !important;
   --custom-tab-width: 185px; /* custom-bar-width  minus  2*custom-bar-padding */
