@@ -18,11 +18,20 @@
 }
 /* The browser-content */
 #tabbrowser-tabbox {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* The sidebar when enabled */
+#tabbrowser-tabbox[sidebar-shown] {
   margin-left: var(--left-margin) !important;
   margin-right: var(--right-margin) !important;
 }
-[inFullscreen] #tabbrowser-tabbox {
-  margin-left: var(--left-margin) !important;
+/* Hides the sidebar when in fullscreen */
+[inFullscreen] #tabbrowser-tabbox[sidebar-shown] {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 /* When not hovering cancel the default crap behavior of the expanded feature */
 #sidebar-main:not(:hover), #sidebar-main:not(:hover) .tabbrowser-tab, #sidebar-main:not(:hover) #vertical-tabs-newtab-button {
@@ -54,6 +63,19 @@
   fill: red !important;
   background-color: transparent !important;
   padding: 5px !important;
+}
+/* Sidebar extensions */
+#sidebar-box {
+  z-index: 100 !important;
+  position: absolute !important;
+  height: 100% !important;
+  margin-left: var(--left-margin);
+  width: var(--custom-tab-width);
+}
+#sidebar-box #sidebar {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 
@@ -137,6 +159,10 @@
 
   #TabsToolbar .titlebar-buttonbox-container {
     visibility: hidden !important;
+  }
+  /* fix for sidebar color on linux */
+  #sidebar-main {
+    background: var(--sidebar-background-color)
   }
 }
 
