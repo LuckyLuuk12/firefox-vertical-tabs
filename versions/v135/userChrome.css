@@ -10,6 +10,10 @@
   height: 100%; /* The height is set to ensure the sidebar will also use it */
   z-index: 9999;
 }
+/* Hides the sidebar when in fullscreen */
+[inFullscreen] #sidebar-main {
+  display: none !important;
+}
 /* The browser-content */
 #tabbrowser-tabbox {
   margin-left: 0 !important;
@@ -21,7 +25,7 @@
 #tabbrowser-tabbox[sidebar-shown] {
   margin-left: var(--tab-collapsed-width) !important;
 }
-/* Hides the sidebar when in fullscreen */
+/* Hides the sidebar when in fullscreen video */
 [inFullscreen] #tabbrowser-tabbox[sidebar-shown] {
   margin-left: 0 !important;
   margin-right: 0 !important;
