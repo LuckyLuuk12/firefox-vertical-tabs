@@ -11,8 +11,12 @@
   z-index: 9999;
 }
 /* Hides the sidebar when in fullscreen */
-[inFullscreen] #sidebar-main {
-  display: none !important;
+[inFullscreen] #sidebar-main:not(:hover) {
+  opacity: 0 !important;
+}
+/* Shows the sidebar when in fullscreen and hovering */
+[inFullscreen] #sidebar-main:hover {
+  opacity: 1 !important;
 }
 /* The browser-content */
 #tabbrowser-tabbox {
@@ -27,8 +31,7 @@
 }
 /* Hides the sidebar when in fullscreen video */
 [inFullscreen] #tabbrowser-tabbox[sidebar-shown] {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin: 0 !important;
 }
 /* When not hovering cancel the default crap behavior of the expanded feature */
 #sidebar-main:not(:hover), #sidebar-main:not(:hover) .tabbrowser-tab, #sidebar-main:not(:hover) #vertical-tabs-newtab-button {
