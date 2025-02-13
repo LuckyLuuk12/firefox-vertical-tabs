@@ -2,12 +2,6 @@
 * {
   scrollbar-width: none !important;
   --custom-tab-width: 226px; /* custom-bar-width  minus  2*custom-bar-padding */
-  --custom-bar-hover-width: 245px;
-  --custom-bar-padding: 9px;
-  --left-side: 0; /* Swap with --right-side value to put the bar on the right side */
-  --right-side: auto;
-  --left-margin: 61.2333px; /* swap with --right-margin to offset the browser content correctly when using a right sidebar */
-  --right-margin: auto;
 }
 
 /* The sidebar containing the tabs */
@@ -25,8 +19,7 @@
 }
 /* The sidebar when enabled */
 #tabbrowser-tabbox[sidebar-shown] {
-  margin-left: var(--left-margin) !important;
-  margin-right: var(--right-margin) !important;
+  margin-left: var(--tab-collapsed-width) !important;
 }
 /* Hides the sidebar when in fullscreen */
 [inFullscreen] #tabbrowser-tabbox[sidebar-shown] {
@@ -35,7 +28,7 @@
 }
 /* When not hovering cancel the default crap behavior of the expanded feature */
 #sidebar-main:not(:hover), #sidebar-main:not(:hover) .tabbrowser-tab, #sidebar-main:not(:hover) #vertical-tabs-newtab-button {
-  width: var(--left-margin) !important;
+  width: var(--tab-collapsed-width) !important;
   min-width: 0 !important;
 }
 /* Use the new crappy expanded shit to add the sidebar background when expanded */
@@ -45,10 +38,6 @@
 /* on hover correct width for tab background */
 #vertical-tabs:hover .tab-background {
   width: var(--custom-tab-width) !important;
-}
-/* Align the tab contents nicely */
-.tab-icon-image, .tab-label-container, .tab-content {
-  padding-left: var(--custom-bar-padding) !important;
 }
 /* display close button and site title on hover of sidebar */
 #sidebar-main:hover .tab-label-container, #sidebar-main:hover .tab-close-button, #sidebar-main:hover .toolbarbutton-text {
@@ -69,7 +58,7 @@
   z-index: 100 !important;
   position: absolute !important;
   height: 100% !important;
-  margin-left: var(--left-margin);
+  margin-left: var(--tab-collapsed-width);
   width: var(--custom-tab-width);
 }
 #sidebar-box #sidebar {
