@@ -1,13 +1,7 @@
-/* Firefox Version 130.0 Custom CSS for vertical tabs */
+/* Firefox Version 135.0 Custom CSS for vertical tabs */
 * {
   scrollbar-width: none !important;
   --custom-tab-width: 226px; /* custom-bar-width  minus  2*custom-bar-padding */
-  --custom-bar-hover-width: 245px;
-  --custom-bar-padding: 9px;
-  --left-side: 0; /* Swap with --right-side value to put the bar on the right side */
-  --right-side: auto;
-  --left-margin: 61.2333px; /* swap with --right-margin to offset the browser content correctly when using a right sidebar */
-  --right-margin: auto;
 }
 
 /* The sidebar containing the tabs */
@@ -16,17 +10,32 @@
   height: 100%; /* The height is set to ensure the sidebar will also use it */
   z-index: 9999;
 }
+/* Hides the sidebar when in fullscreen */
+[inFullscreen] #sidebar-main:not(:hover) {
+  opacity: 0 !important;
+}
+/* Shows the sidebar when in fullscreen and hovering */
+[inFullscreen] #sidebar-main:hover {
+  opacity: 1 !important;
+}
 /* The browser-content */
 #tabbrowser-tabbox {
-  margin-left: var(--left-margin) !important;
-  margin-right: var(--right-margin) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
-[inFullscreen] #tabbrowser-tabbox {
-  margin-left: var(--left-margin) !important;
+/* The sidebar when enabled */
+#tabbrowser-tabbox[sidebar-shown] {
+  margin-left: var(--tab-collapsed-width) !important;
+}
+/* Hides the sidebar when in fullscreen video */
+[inFullscreen] #tabbrowser-tabbox[sidebar-shown] {
+  margin: 0 !important;
 }
 /* When not hovering cancel the default crap behavior of the expanded feature */
 #sidebar-main:not(:hover), #sidebar-main:not(:hover) .tabbrowser-tab, #sidebar-main:not(:hover) #vertical-tabs-newtab-button {
-  width: var(--left-margin) !important;
+  width: var(--tab-collapsed-width) !important;
   min-width: 0 !important;
 }
 /* Use the new crappy expanded shit to add the sidebar background when expanded */
@@ -36,10 +45,6 @@
 /* on hover correct width for tab background */
 #vertical-tabs:hover .tab-background {
   width: var(--custom-tab-width) !important;
-}
-/* Align the tab contents nicely */
-.tab-icon-image, .tab-label-container, .tab-content {
-  padding-left: var(--custom-bar-padding) !important;
 }
 /* display close button and site title on hover of sidebar */
 #sidebar-main:hover .tab-label-container, #sidebar-main:hover .tab-close-button, #sidebar-main:hover .toolbarbutton-text {
@@ -54,6 +59,19 @@
   fill: red !important;
   background-color: transparent !important;
   padding: 5px !important;
+}
+/* Sidebar extensions */
+#sidebar-box {
+  z-index: 100 !important;
+  position: absolute !important;
+  height: 100% !important;
+  margin-left: var(--tab-collapsed-width);
+  width: var(--custom-tab-width);
+}
+#sidebar-box #sidebar {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 
@@ -137,6 +155,10 @@
 
   #TabsToolbar .titlebar-buttonbox-container {
     visibility: hidden !important;
+  }
+  /* fix for sidebar color on linux */
+  #sidebar-main {
+    background: var(--sidebar-background-color)
   }
 }
 
