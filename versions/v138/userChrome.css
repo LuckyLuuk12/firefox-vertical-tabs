@@ -1,0 +1,21 @@
+/*
+  Firefox Version 138.0+ Custom CSS for vertical tabs
+  This is likely the last update with some extremely small "fixes" from this css
+  as this version of Firefox provides proper hover-able vertical tabs already.
+  This css only removes some of the small annoyances I encountered.
+*/
+* {
+  scrollbar-width: none !important;
+}
+/* OPTIONAL: Removes the draggable "splitter" for v137+ */
+#sidebar-launcher-splitter {
+  display: none;
+}
+/* Nice red on-hover effect for close icon */
+.close-icon:hover {
+  fill: red !important;
+}
+/* Use the pointer cursor for everything in the sidebar */
+#sidebar-main > * {
+  cursor: pointer !important;
+}

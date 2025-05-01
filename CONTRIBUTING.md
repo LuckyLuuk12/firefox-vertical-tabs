@@ -1,4 +1,9 @@
-# How to contribute:
+# Contributing to the project
+Since **Firefox v138**, the vertical tabs feature is now natively supported in Firefox.
+Meaning contributing to this project is no longer necessary nor will be looked at unless
+there is a major bug in older stylesheet versions.
+
+### Outdated since v138 - How to contribute:
 As of now, this is a just-started project. I personally try to review all code so please contribute the normal way by:
 1. Forking the project
 2. Writing your code

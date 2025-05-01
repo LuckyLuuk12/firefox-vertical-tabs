@@ -1,12 +1,22 @@
 <h1>Firefox Vertical Tabs</h1>
-<h3>working for Versions 130.0, 132 &amp; 133 (64-bit)</h3>
+<h3>working for Versions 130.0, 132, 132.0.1, 133, 134, 135, 137 &amp; 138 (64-bit)</h3>
 <p>
-As of now, september 2024, Firefox's vertical tabs are still in an 
-experimental version and they are absolute trash. By following below steps 
-I provide you an 'acceptable' styling and functionality for the vertical tabs.
-It might be though that Firefox updates it and breaks everything again. 
-Please notify me or fork and pull request on this yourself (:
+This project started September 2024, Firefox's vertical tabs were basically completely
+absent. That's why I made this stylesheet. Now since May 2025, Firefox has provided 
+a very decent implementation of vertical tabs that can be expanded on-hover.
+This features exists since version 138.0 and can be enabled by going to the settings wheel
+in the vertical tabs after enabling vertical tabs in the normal settings.
 </p>
+
+<h2>Continuation of this project?</h2>
+I will only keep updating the stylesheet as long as Firefox keeps the &quot;small annoyances&quot;
+I encounter like: Too wide scrollbar, resizing the vertical tabs and no red indicator for the close-tab icon.
+If they fix these issues, I will stop updating the stylesheet.
+
+**To prevent confusion:
+The [userChrome.css](https://github.com/LuckyLuuk12/firefox-vertical-tabs/blob/master/userChrome.css) 
+file in the root of this repository will stay at the v137 version.**
+
 <h2>Installation:</h2>
 Note that if the latest userChrome.css works in the latest version of Firefox, that we do not have a folder for that version
 as we only update the userChrome.css file when it breaks. So if you are using a newer version of Firefox just try the latest.
