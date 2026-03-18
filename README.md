@@ -1,5 +1,5 @@
 <h1>Firefox Vertical Tabs</h1>
-<h3>working for Versions 130.0, 132, 132.0.1, 133, 134, 135, 137 &amp; 138 (64-bit)</h3>
+<h3>working for Versions 130.0, 132, 132.0.1, 133, 134, 135, 137 &amp; 138+ (64-bit)</h3>
 <p>
 This project started September 2024, Firefox's vertical tabs were basically completely
 absent. That's why I made this stylesheet. Now since May 2025, Firefox has provided 
@@ -15,7 +15,7 @@ If they fix these issues, I will stop updating the stylesheet.
 
 **To prevent confusion:
 The [userChrome.css](https://github.com/LuckyLuuk12/firefox-vertical-tabs/blob/master/userChrome.css) 
-file in the root of this repository will stay at the v137 version.**
+file in the root of this repository might be updated with personal preferences while I keep the older files in the corresponding version folders.**
 
 <h2>Installation:</h2>
 Note that if the latest userChrome.css works in the latest version of Firefox, that we do not have a folder for that version
