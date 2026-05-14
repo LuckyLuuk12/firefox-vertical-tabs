@@ -1,7 +1,13 @@
-/* Firefox Version >138.0 Custom CSS for vertical tabs */
+/** 
+  * Firefox Improved Vertical Tabs
+  * Version: >= 150.x
+  * Author: Luuk Kablan
+  * Date: 15 May 2026
+  */
 * {
   scrollbar-width: none !important;
   --custom-tab-width: 206px;
+  --fallback-background: light-dark(white, rgb(28, 27, 34));
   /* custom-bar-width  minus  2*custom-bar-padding */
 }
 
@@ -11,7 +17,7 @@
   height: 100%;
   /* The height is set to ensure the sidebar will also use it */
   z-index: 9999;
-  background: var(--sidebar-background-color);
+  background: var(--toolbox-bgcolor, --fallback-background) !important;
 }
 
 /* Removes the draggable "splitter" for v137+ */
@@ -60,7 +66,7 @@
 /* Use the new crappy expanded shit to add the sidebar background when expanded */
 .expanded-button,
 *[expanded] {
-  background: var(--sidebar-background-color);
+  background: var(--toolbox-bgcolor, --fallback-background) !important;
 }
 
 /* on hover correct width for tab background - Disabled as it causes issues */
@@ -106,11 +112,19 @@
 }
 
 /* START - OPINIONATED STYLES */
-/* Full width container when expanded */
+/* Full width container when the vertical bar is expanded */
 .tab-group-label {
   #tabbrowser-tabs[orient="vertical"] & {
-    min-width: calc(100% - 2 * var(--space-small)) !important;
+    /*min-width: calc(100% - 2 * var(--space-small)) !important;*/
+    min-width: 100% !important;
     transition: width 0s ease-in-out !important;
+  }
+}
+
+/* Makes sure that both expanded and collapsed containers "tab-group"s use the same width */
+.tab-group-label-hover-highlight {
+  #tabbrowser-tabs[orient="vertical"] & {
+    margin-inline-end: var(--space-medium) !important;
   }
 }
 
