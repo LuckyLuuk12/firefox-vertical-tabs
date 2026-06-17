@@ -1,9 +1,4 @@
-/** 
-  * Firefox Improved Vertical Tabs
-  * Version: >= 150.x
-  * Author: Luuk Kablan
-  * Date: 15 May 2026
-  */
+/* Firefox Version >= 150.x Custom CSS for vertical tabs */
 * {
   scrollbar-width: none !important;
   --custom-tab-width: 206px;
@@ -17,7 +12,7 @@
   height: 100%;
   /* The height is set to ensure the sidebar will also use it */
   z-index: 9999;
-  background: var(--toolbox-bgcolor, --fallback-background) !important;
+  background: var(--toolbox-background-color, --fallback-background) !important;
 }
 
 /* Removes the draggable "splitter" for v137+ */
