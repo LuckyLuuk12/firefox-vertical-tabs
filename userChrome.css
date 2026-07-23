@@ -38,11 +38,6 @@
   box-shadow: none !important;
 }
 
-/* The sidebar when enabled */
-#tabbrowser-tabbox[sidebar-shown] {
-  margin-left: var(--tab-collapsed-width) !important;
-}
-
 /* Hides the sidebar when in fullscreen video */
 [inFullscreen] #tabbrowser-tabbox[sidebar-shown] {
   margin: 0 !important;
